@@ -23,7 +23,6 @@ funcion anonima  -  Funcion que va a permitir generar un comportamiento sin la n
    Comparator: Indicar un criterio o comparador de ordenamiento
    ```
 4. Match (param: Predicate)
-</b>
    ```
    Variantes para devolver expresion boleana de algun criterio que se  esta especificando en ese punto.
    
