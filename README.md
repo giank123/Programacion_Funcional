@@ -18,11 +18,17 @@ funcion anonima  -  Funcion que va a permitir generar un comportamiento sin la n
    Function: Espera retornar un valor
    ```
 3. Sorted (param: Comparator)
+   &nbsp;
+   &nbsp;
+   &nbsp;
+  
+6.  
    ```
    Se usa para ordenar una coleccion
    Comparator: Indicar un criterio o comparador de ordenamiento
    ```
-4. Match (param: Predicate)
+7. Match (param: Predicate)
+</b>
    ```
    Variantes para devolver expresion boleana de algun criterio que se  esta especificando en ese punto.
    
@@ -30,14 +36,14 @@ funcion anonima  -  Funcion que va a permitir generar un comportamiento sin la n
    - allMatch: Evalua todo el stream bajo la condicion
    - noneMatch: Evalua todo el stream bajo la condicion
    ```
-5. Limit/Skip
+8. Limit/Skip
    ```
    Se utiliza en paginación
    
    - skip: Indica el inicio , de que posicion querras q te muestre
    - limit: Indica la cantidad que querras que te muestre (los primeros)
    ```
-6. Collectors
+9. Collectors
    ```
    
    - groupingBy: Devuelve un map el tipo del que se especifica y el criterio del mismo .
