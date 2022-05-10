@@ -39,8 +39,13 @@ funcion anonima  -  Funcion que va a permitir generar un comportamiento sin la n
    ```
 6. Collectors
    ```
-   
+   Se usa para transformar los datos 
    - groupingBy: Devuelve un map el tipo del que se especifica y el criterio del mismo .
    - counting: Contar la cantidad de elementos de acuerdo a un criterio que yo estoy agrupando. 
    
    ```
+7. Reduce
+   ```
+   Poder agrupar algunos criterios como acumuladore : Suma , Promedio
+    Devuelve un optional , para evitar  los NullPointerException.
+    ```

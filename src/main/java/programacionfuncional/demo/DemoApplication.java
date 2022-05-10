@@ -7,10 +7,7 @@ import programacionfuncional.demo.model.Product;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -125,14 +122,37 @@ public class DemoApplication {
 		//System.out.println(collect1);
 
 		// Counting
-		//
         Map<String, Long>  collect2 = products.stream()
 				                      .collect(Collectors.groupingBy(
 						                        Product::getName, Collectors.counting()
 									            )
 									  );
 
-		System.out.println(collect2);
+		//System.out.println(collect2);
+
+		//Agrupando por nombre producto y suma
+		Map<String, Double> collect3 = products.stream()
+				                      .collect(Collectors.groupingBy(
+											  Product::getName,
+											  Collectors.summingDouble(Product::getPrice)));
+
+		//System.out.println(collect3);
+		//Obteniendo suma y resumen
+		DoubleSummaryStatistics statistics = products.stream()
+				.collect(Collectors.summarizingDouble(Product::getPrice));
+
+		//System.out.println(statistics);
+		//System.out.println(statistics.getAverage());
+
+		// 7- Reduce
+		Optional<Double> sum = products.stream()
+				                       .map( Product::getPrice)
+				                       .reduce(Double::sum);
+		                                //.reduce((a,b) -> a+b)
+
+		System.out.println(sum.get());
+
+
 	}
 
 	public static int getAge(LocalDate birthdate){
